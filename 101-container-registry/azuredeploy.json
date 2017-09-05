@@ -39,7 +39,8 @@
       "name": "[variables('acrStorageName')]",
       "type": "Microsoft.Storage/storageAccounts",
       "apiVersion": "2015-06-15",
-      "location": "[resourceGroup().location]",
+      // "location": "[resourceGroup().location]",
+      "resourceGroup": "ExampleGroup",
       "comments": "This storage account is used by Container Registry for storing its datas.",
       "dependsOn": [],
       "tags": {

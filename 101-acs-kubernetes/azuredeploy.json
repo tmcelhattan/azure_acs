@@ -115,7 +115,8 @@
     {
       "apiVersion": "2016-09-30",
       "type": "Microsoft.ContainerService/containerServices",
-      "location": "[resourceGroup().location]",
+      // "location": "[resourceGroup().location]",
+      "resourceGroup": "ExampleGroup",
       "name":"[concat('containerservice-',resourceGroup().name)]",
       "properties": {
         "orchestratorProfile": {
