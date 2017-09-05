@@ -12,7 +12,7 @@
       "value": "Standard_A2"
     },
     "linuxAdminUsername": {
-      "value": "tmcelhattan"
+      "value": "azureuser"
     },
     "orchestratorType": {
       "value": "Kubernetes"
@@ -21,12 +21,13 @@
       "value": 1
     },
     "sshRSAPublicKey": {
-      "value": "GEN-SSH-PUB-KEY"
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDhJ5OVbpbqHqT+19firRlQZney0S2pl3hExHPJlXzMhD8Zz4rw7rCBwtuaEcYaEkEl1PYvLzynCNLbiKk88DiBxLWfppXpgoT/C889/s87dkQYxDXz/2i1cvUO66hktdSYgDbmZD1bgVoo5tzYlZaS67NRD2kHh+fjcespjLq6H3bsyQWH2MiVzhFm3e2JIAGBZGR87NUpB9KHHZfJ291u6Lwyw5BNM74cH0DJryruUUwJM3CSMek5YMnOwgVZEtioRnqBgrsjsVnL5chU2jbOpXThx3R7c5149ytIXptd9hYGZdJLYcIPrMx8hnDfYVfz5n2B776MQuGaARawDAc1 tmcelhattan@Azure"
     },
     "servicePrincipalClientId": {
-      "value": "GEN-UNIQUE"
+      "value": "6237f069-a087-43f1-983c-86c6c97b12e3"
     },
     "servicePrincipalClientSecret": {
-      "value": "GEN-UNIQUE"
+      "value": "Password123!"
     }
   }
+}
