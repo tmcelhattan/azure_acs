@@ -1,0 +1,1 @@
+az role assignment create --scope /subscriptions/<subscription_id>/resourcegroups/ExampleGroup/providers/Microsoft.ContainerRegistry/registries/<azure_acr_name> --role Owner --assignee <app_id>
