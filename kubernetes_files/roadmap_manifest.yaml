@@ -1,0 +1,64 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: roadmap
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: roadmap
+    spec:
+      containers:
+      - name: roadmap
+        image: treymc93/stelligentroadmap_app
+        ports:
+        - containerPort: 3000
+        env:
+        - name: BUCKET
+          value: trey-azure-testbucket
+        - name: DB_DATABASE
+          value: roadmap
+        - name: DB_USERNAME
+          value: stelligent@roadmap
+        - name: RAILS_ENV
+          value: production
+        - name: AWS_REGION
+          value: us-east-1
+        - name: DB_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: railsapp-secrets
+              key: database-endpoint
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: railsapp-secrets
+              key: database-password
+        - name: SECRET_KEY_BASE
+          valueFrom:
+            secretKeyRef:
+              name: railsapp-secrets
+              key: secret-key-base
+        - name: ACCESS_KEY_ID
+          valueFrom:
+            secretKeyRef:
+              name: railsapp-secrets
+              key: access-key-id
+        - name: SECRET_ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              name: railsapp-secrets
+              key: secret-access-key-id
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: roadmap
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app: roadmap
