@@ -1,0 +1,1 @@
+az group deployment create --name ExampleDeployment --resource-group ExampleGroup --template-file 101-acs-kubernetes/azuredeploy.json --parameters @101-acs-kubernetes/azuredeploy.parameters.json

@@ -1,0 +1,1 @@
+az group deployment create --name ExampleACRDeployment --resource-group ExampleGroup --template-file 101-container-registry/azuredeploy.json --parameters 101-container-registry/azuredeploy.parameters.json

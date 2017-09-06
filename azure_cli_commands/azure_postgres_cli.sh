@@ -1,0 +1,1 @@
+az postgres server create --resource-group myresourcegroup --name <postgres_db_name>  --location centralus --admin-user stelligent --admin-password <server_admin_password> --performance-tier Basic --compute-units 50 --version 9.6
