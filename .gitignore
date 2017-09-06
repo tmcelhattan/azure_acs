@@ -1,1 +1,2 @@
 kubernetes_files/railsapp_secrets.yaml
+101-acs-kubernetes/azuredeploy.parameters.json

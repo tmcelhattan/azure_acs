@@ -1,0 +1,1 @@
+az group create --location <azure_region> --name <name_for_group>
